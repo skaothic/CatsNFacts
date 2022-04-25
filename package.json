@@ -23,11 +23,12 @@
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
     "rxjs": "~7.4.0",
+    "sweetalert2": "^11.4.9",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.1.3",
+    "@angular-devkit/build-angular": "^13.3.3",
     "@angular/cli": "~13.1.3",
     "@angular/compiler-cli": "~13.1.0",
     "@angular/localize": "^13.1.3",

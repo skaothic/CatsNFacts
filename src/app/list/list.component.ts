@@ -25,7 +25,7 @@ public catsList=[]
     if (response.status===200){
       this.catsList=response.body.data !=null?response.body.data:[]
     }
-    else {console.log("PB requete cats")}
+    else {console.log("PB requête cats")}
   })
 }
 public getFact():void{
@@ -34,9 +34,8 @@ public getFact():void{
     if (response.status===200){
       this.fact=response.body.fact
       Swal.fire({title:"Did you know that??",text:this.fact})
-     
     }
-    else console.log("PB requete fact")
+    else console.log("PB requête fact")
   })
 }
 
