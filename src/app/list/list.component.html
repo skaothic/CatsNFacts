@@ -1,0 +1,31 @@
+<main class="container w-100">
+    <h2>Code couleur</h2>
+    <div class="row align-items-start mb-5">
+        <div class="col border-success border alert-success mx-3 mb-1 ">Naturel</div>
+        <div class="col alert-warning border border-warning mx-3 mb-1">Mutation</div>
+        <div class="col alert-dark border border-dark mx-3 mb-1">Croisement</div>
+        <div class="col alert-primary border border-primary mx-3 mb-1">Hybride</div>
+        <div class="col alert-danger border border-danger mx-3 mb-1">Origine Inconnue</div>
+    </div>
+    <div class="row align-items-start">
+        <button class="col btn btn-light mx-2" (click)="getCats(1)">page 1</button>
+        <button class="col btn btn-light mx-2" (click)="getCats(2)">page 2</button>
+        <button class="col btn btn-light mx-2" (click)="getCats(3)">page 3</button>
+        <button class="col btn btn-light mx-2" (click)="getCats(4)">page 4</button>
+    </div>
+    <div class="d-flex flex-row justify-content-between w-100" *ngFor="let cat of catsList">
+        <div role='button' [ngClass]="{'card cat my-3 ':true,
+        'alert-warning':cat['origin']=='Mutation',
+        'alert-success':cat['origin']=='Natural'||'Natural/Standard',
+        'alert-dark':cat['origin']=='Crossbreed',
+        'alert-danger':cat['origin']=='',
+        'alert-primary':cat['origin']=='Hybrid'}" (click)="getFact()">
+            <h3 class="card-title">Nom: {{cat['breed']}}</h3>
+            <p class="card-text">Origine: {{cat['country']}}</p>
+            <p class="card-text" *ngIf="cat['coat']!=''">Poil: {{cat['coat']}}</p>
+        </div>
+        <p class="tips">Cliquez pour voir le Fact</p>
+
+    </div>
+
+</main>

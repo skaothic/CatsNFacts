@@ -1,0 +1,14 @@
+<table class='table'>
+    <thead>
+        <tr>
+            <th>
+                <h2>Voici 10 Facts au hasard</h2>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fact of FactsList">
+            <td>{{fact['fact']}}</td>
+        </tr>
+    </tbody>
+</table>
